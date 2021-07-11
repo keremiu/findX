@@ -11,7 +11,7 @@ moveX = inputX*movespeed;
 moveY = moveY + grv;
 
 temp = image_speed;
-
+depth = -y;
 if(bend)
 {
 	sprite_index =bend1;

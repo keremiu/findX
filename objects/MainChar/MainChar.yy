@@ -3,7 +3,7 @@
     "name": "state",
     "path": "sprites/state/state.yy",
   },
-  "solid": false,
+  "solid": true,
   "visible": true,
   "spriteMaskId": null,
   "persistent": true,
