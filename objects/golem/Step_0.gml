@@ -6,7 +6,12 @@ if(x >= temp + 100 or x <= temp - 100) {
 	sprite_index = golem_move;
 	 image_xscale = -image_xscale;	
 	dir = -dir;
+	if(temp<x)
+	image_xscale=-1;
+	if(temp>x)
+	image_xscale=1;
 }
+;
 
 moveX = dir * movespeed;
 x += moveX;
