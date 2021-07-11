@@ -105,3 +105,8 @@ if(hits > 0)
 }
 x+=moveX;
 y+=moveY;
+
+if(x >= 1350)
+{
+	room_goto(Room2)
+}

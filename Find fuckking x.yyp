@@ -5,6 +5,7 @@
     {"id":{"name":"state","path":"sprites/state/state.yy",},"order":7,},
     {"id":{"name":"Sprite11","path":"sprites/Sprite11/Sprite11.yy",},"order":14,},
     {"id":{"name":"bend1","path":"sprites/bend1/bend1.yy",},"order":11,},
+    {"id":{"name":"Sprite15","path":"sprites/Sprite15/Sprite15.yy",},"order":18,},
     {"id":{"name":"Sprite2","path":"sprites/Sprite2/Sprite2.yy",},"order":1,},
     {"id":{"name":"jump1","path":"sprites/jump1/jump1.yy",},"order":8,},
     {"id":{"name":"attack","path":"sprites/attack/attack.yy",},"order":16,},
