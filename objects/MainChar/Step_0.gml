@@ -4,7 +4,7 @@
   var left = keyboard_check(vk_left) or keyboard_check(ord("A"));
   var jump = keyboard_check(vk_up) or keyboard_check(ord("W"));
  var  bend = keyboard_check(vk_down) or keyboard_check(ord("S"));
-
+var lmb = mouse_check_button(mb_left);
 var inputX = right-left;
 
 moveX = inputX*movespeed;
@@ -72,7 +72,36 @@ if(place_meeting(x, y + moveY, o_ground))
 	moveY = 0;
 }
 
+if(lmb) 
+{
+	if(sprite_index != attack)
+	{
+		sprite_index = attack;
+		ds_list_clear(hitByAttack);
+	}
+	mask_index = attack_hitbox;
+}
 
+var hitByAttackNow = ds_list_create();
+var hits = instance_place_list(x, y, golem, hitByAttackNow, false);
 
+if(hits > 0)
+{
+	
+	for(var i = 0; i < hits; i++)
+	{
+		var hitID = hitByAttackNow[| i];
+		
+		if(ds_list_find_index(hitByAttack, hitID) == -1)
+		{
+			ds_list_add(hitByAttack, hitID);
+			
+			with(hitID)
+			{
+				golem.hp -= 1;
+			}
+		}
+	}
+}
 x+=moveX;
 y+=moveY;

@@ -26,3 +26,7 @@ x += moveX;
 }
 y+=moveY;
  
+ if(hp <= 0) 
+ {
+	 instance_destroy(golem);
+ }
